@@ -17,7 +17,7 @@
 	\vspace{1cm}
 	{\scshape\Large Probabilidad I\par}
 	\vspace{1.5cm}
-	{\huge\bfseries Tarea I\par}
+	{\huge\bfseries Tarea II\par}
 	\vspace{.5cm}
 	{\Large\itshape Sandra Del Mar Soto Corderi \par}
 	\vspace{.5cm}
@@ -112,23 +112,39 @@ Demuestre
 	% Ejercicio 5
    \item {
     En cierto pueblecillo con 100,000 habitantes se publican tres periodicos I,II,III. La proporción es la siguiente:\\
-I:10 , II:30, III:5, I y II: 8, I y III: 2, II y III: 1 , I,II,III: 1
+I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .01
 	\begin{enumerate}[label=\alph*) ]
 	% a
    \item {
    Encuentre el número de personas que leen sólo un periódico.\\
-
+	El numero de personas que lean un sólo periódico está dado por la probabilidad:\\
+	$P(I \cap II^c\cap III^c)+P(I^c \cap II\cap III^c)+P(I^c \cap II^c\cap III)$ y esto es:\\
+	$P(I \cap( II^c \cap III^c))+ P(II\cap(I^c \cap III^c))+P(III \cap (I^c \cap II^c))=$ \\
+	$P(I \cap (II \cup III)^c)+P(II \cap (I \cup III)^c)+P(III \cap (II \cup I)^c)=$\\
+	$P(I-(II\cup III))+P(II-(I \cup III))+P(III-(II \cup I))=$\\
+	$P(I)-P(I \cap (II \cup III))+P(II)-P(II \cap (I \cup III))+P(III)-P(III\cap (II\cup I))=$ \\
+	$P(I)+P(II)+P(III)-P((I\cap II)\cup(I \cap III))-P((II\cap I)\cup(II \cap III))-P((III\cap II)\cup(III \cap I))=$\\
+	$P(I)+P(II)+P(III)-2P(I\cap II)-2P(I\cap III)-2P(II \cap III)+3P(I\cap II \cap III)$ \\
+	Como sabemos cada una de ellas esto es:\\
+	$.10+.30+.05-2(.08)-2(.02)-2(.01)+3(.01)=.10+.30+.05-.16-.04-.02+0.3=.26$\\
+	Esto quiere decir que el 26 por ciento de la poblacion lee solamente un periodico. Son 100,000 habitantes por lo tanto 26,000 personas leen solamente un periodico.
    }
 
    % b
    \item {
    ¿Cuántas personas leen al menos dos periódicos?\\
+   Si restamos de las 100,000 personas las personas que leen solamente un periodico nos quedamos con las personas que leen mas de un periodico, es decir, que al menos leen dos. Por lo tanto 100,000-26,000 = 74,000 personas leen por lo menos dos periodicos.
 
    }
 
       % c
    \item {
   Si I y III son los periodicos matutinos y II es el periódico vespertino, ¿Cuántas perosnas leen al menos un periódico matutino y un vespertino?\\
+  Como es al menos un periodico matutino, se puede dar el caso en que se lean los dos. La probabilidad esta dada por:\\
+  $P(I\cap III^c \cap II)+P(I^c \cap III \cap II)+P(I\cap II \cap III)$ \\
+  $P((I\cap II)-III)+P((II\cap III)-I)+0.01=$ \\
+  $P(I\cap II)-P(I\cap II \cap III)+P(II\cap III)-P(II \cap I \cap III)+0.01= 0.08+0.01+0.1-2(0.01)=0.08$ \\ \\
+  Entonces hay 8,000 personas que leen al menos un periodico matutino y un vespertino.
 
    }
 
@@ -139,31 +155,107 @@ I:10 , II:30, III:5, I y II: 8, I y III: 2, II y III: 1 , I,II,III: 1
 	% Ejercicio 6
    \item {
     Demuestre que:\\
-	$$P(A)P(B)-P(A \cap B)=P(A^c \cap B )- P(A^c)P(B)$$
+	$$P(A)P(B)-P(A \cap B)=P(A^c \cap B )- P(A^c)P(B)$$ \\
+	Por axiomas de probabilidad tenemos que: \\
+	\textbf{Definicion:}$P(A^c)=1-P(A)$ $\therefore$ \\
+	$-P(A^c)P(B)=-(1-P(A))(P(B))=(P(A)-1)(P(B))=P(A)P(B)-P(B)$\\
+	Y además, por teoría de conjuntos: \textbf{Afirmacion} $A^c \cap B = B-A$ por lo que:\\
+	$P(A^c \cap B) = P(B-A)$ y:\\
+	\textbf{Definicion:}$P(B-A)=P(B)-P(A \cap B)$ $\therefore$\\
+	$P(A^C \cap B) - P(A^c)P(B)= P(B)-P(A\cap B)+P(A)P(B)-P(B)=P(A)P(B)-P(A\cap B)_{\blacksquare}$
 	}
 
 	% Ejercicio 7
    \item {
     Demuestre que:\\
-	$$P(A \cup B \cup D) = P(A)+P(A^c \cap B) +P(A^c \cap B^c \cap D)$$
+	$$P(A \cup B \cup D) = P(A)+P(A^c \cap B) +P(A^c \cap B^c \cap D)$$\\
+	Desarrollando el lado izquierdo tenemos que:\\
+	$P(A \cup B \cup D) = P(A \cup (B\cup D))=P(A)+P(B\cup D) - P(A \cap (B\cup D)) = P(A)+P(B)+P(D)-P(B\cap D)-P((A\cap B) \cup (A \cap D))= \\ P(A)+P(B)+P(D)-P(B \cap D) -P(A\cap B) -P(A\cap D) +P(A\cap B \cap D)  \textbf{(1)}$\\
+	Y desarrollando el lado derecho tenemos que:\\
+	Por lo visto en el inciso anterior: $P(A^c \cap B) = P(B-A) = P(B)-P(A\cap B)$ y tenemos que:\\
+	$P(A^c \cap B^c \cap D) = P( (A^c \cap B^c) \cap D)$ y por teoria de conjuntos: $(A^c \cap B^c) = (A \cup B)^c$ por lo tanto:\\
+	$P((A^c \cap B^c))\cap D)= P((A \cup B)^c \cap D)$ y por teoria de conjuntos tenemos que:\\
+	\textbf{Afirmacion:} $(A\cup B)^c \cap D = D-(A\cup B)$ entonces:\\
+	$P((A\cup B)^c \cap D) = P(D-(A\cup B))$ y por la definicion del inciso anterior tenemos que:\\
+	$=P(D)-P(D\cap(A\cup B)) = P(D)-P((D\cap A) \cup (D \cap B))=P(D)-P(D\cap A) - P(D \cap B) + P((D\cap A) \cap ( D \cap B))= P(D) -P(D \cap A) - P(D \cap B) + P(D \cap B \cap A)$ entonces en el lado derecho:\\
+	$P(A) + P(A^c \cap B) +P(A^c \cap B^c \cap D) =$\\
+	$P(A)+P(B)-P(A\cap B) +P(D) -P(D\cap A) - P(D\cap B) +P(D\cap B \cap A) =$ \\
+	$P(A)+P(B)+P(D)-P(A \cap B) -P(D\cap B) -P(D\cap A) +P(D\cap A \cap B) \textbf{(2)}$ \\
+	Como la intersección es conmutativa entonces el lado izquierdo y derecho son iguales al ser desarrollados. Por lo tanto la igualdad se cumple. $_{\blacksquare}$
 	}
 
 	% Ejercicio 8
    \item {
     Demuestre que:\\
 	\begin{center}
-	$P(E \cup F \cup G) = P(E) + P(F) + P(G) - P(E^c \cap F \cap G) -P(E \cap F^c \cap G) - P(E \cap F \cap G^c)-2P(E \cap F \cap G)$
+	$P(E \cup F \cup G) = P(E) + P(F) + P(G) - P(E^c \cap F \cap G) -P(E \cap F^c \cap G) - P(E \cap F \cap G^c)-2P(E \cap F \cap G)$ \\
+	
 	\end{center}
+	Por el inciso anterior sabemos que al desarrollar el lado izquierdo tenemos que:\\
+	$P(E)+P(F)+P(G)-P(F\cap E)-P(F\cap G) -P( G\cap E)+P(F\cap E \cap G)$\\
+	Por teoría de conjuntos sabemos que $(F\cap G \cap E^c) = ((F \cap G) \cap E^c)=(F\cap G)-E$ entonces $P(E^c\cap F \cap G) = P(F\cap G) - E) = P(F\cap G) -P((F\cap G) \cap E)= P(F\cap G)-P(F\cap G \cap E)$. De forma análoga se hace lo mismo con $P(E\cap F^c \cap G) $ y $P(E \cap F \cap G^c)$ y tenemos que:
+	$-P(E^c \cap F \cap G) = P(F\cap G \cap E) - P(F\cap G)$\\
+	$-P(E \cap F^c \cap G) = P(F\cap G \cap E) - P(E\cap G)$\\
+	$-P(E \cap F \cap G^c) = P(F\cap G \cap E) - P(F\cap E)$\\
+	Esto implica que:\\
+	$P(E)+P(F)+P(G)-P(E^c \cap F \cap G)-P(E \cap F^c \cap G)-P(E \cap F \cap G^c)-2P(E\cap F \cap G)=$\\
+	$P(E)+P(F)+P(G)-P(F\cap G)-P(E\cap G)-P(F\cap E) +3P(F\cap G \cap E) -2P(E\cap G \cap F)=$\\
+	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\ 
+	Y esto es igual al lado izquierdo. Por lo tanto ambos lados son iguales. La igualdad se cumple $_{\blacksquare}$
+	
 	}
 
 	% Ejercicio 9
    \item {
-    Demuestre que si P y P' son dos medidas de probabilidad definidas sobre el mismo espacio muestral, antonces aP+bP' es también una medida de probabilidad, para cualesquiera dos números no negativos a,b que satisfacen a+b=1\\
+    Demuestre que si P y P' son dos medidas de probabilidad definidas sobre el mismo espacio muestral (E), antonces aP+bP' es también una medida de probabilidad, para cualesquiera dos números no negativos a,b que satisfacen a+b=1\\
+    \textbf{Definición:} Una medida de probabilidad P es una función que asigna a cada elemento A del $\sigma-$algebra un numero entre 0 y 1. Y además que cumple que:\\
+    $0 \leq P(A) \leq 1 : A \in \sigma(a)\subseteq \wp(E)$\\
+    $P(E)=1, P(\varnothing)=0$\\
+    Si $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ entonces\\
+    $P(\bigcup\limits_{i=1}^{n} A_{i})= \sum_{i=1}^{n} P(A_{i})$\\
+    \textbf{Definicion:}Una $\sigma-$algebra es una clase de subconjuntos del espacio muestral si es cerrada bajo complementos, bajo uniones y si el  vacio se encuentre en el sigma algebra.\\ \\
+    Como $a+b=1 : a,b \geq 0$ esto implica que despejando a $a$ y a $b$ tenemos que:\\
+    $a=1-b$\\
+    $b=1-a$\\
+    Pero por hipotesis a,b son numeros no negativos esto implica que:\\
+    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \           
+    $1-a \geq 0 \rightarrow 1\geq a \geq 0$ \\
+    Entonces a,b son numeros positivos que se encuentra entre 0 y 1. \\
+    Sabemos que:\\
+    $0 \leq P(x) \leq 1$ \ $\therefore$ $0(a)\leq aP(x) \leq a \therefore $ \\$ 0(a)+bP'(x)\leq aP(x)+bP'(x) \leq a+bP'(x)$ \ \ entonces llegamos a la conclusion de que:\\
+    $bP'(x)\leq aP(x)+bP'(x) \leq a+bP'(x)$\\
+    Por hipotesis, b es un numero no negativo y tenemos que $0\leq P'(x)\leq 1$ ya que P'(x) es una medida de probabilidad entonces $b(0)\leq bP'(x) \leq b \therefore 0\leq bP'(x)$ entonces:\\
+    $0\leq bP'(x)\leq aP(x)+bP'(x)\leq a+bP'(x)$\\
+    Supongamos que $a+bP'(x)\geq 1$ esto implica que:\\
+    $bP'(x)\geq 1-a$ pero por hipotesis a+b=1 $\therefore$ $1-a=b$ $\therefore bP'(x)\geq b \therefore P'(x)\geq 1 \textbf{!}$\\
+    Como P'(x) es una medida de probabilidad entonces P'(x)$\leq 1$, la contradicción vino de suponer que $a+bP'(x)\geq 1$ entonces $a+P'(x)\leq 1$ entonces:\\
+    \\
+    $0\leq bP'(x)\leq aP(x)+bP'(x)\leq a+bP'(x)\leq 1$ \\
+    \\
+    $0\leq aP(x)+bP'(x)\leq 1$\\ \\
+    Entonces la función (aP+bP')(x)=aP(x)+bP'(x) cumple con la primera condición de que sea una medida de probabilidad. Ahora, tenemos que al evaluar la función (aP+bP') con E tenemos que:\\ \\
+    $(aP+bP')(E)=aP(E)+bP'(E)=a(1)+b(1)=1$ \\
+    Debido a que por hipotesis a+b=1 y P(E)=P'(E)=1 ya que son medidas de probabilidad. Además, tenemos que al evaluar con $\varnothing$ tenemos:\\ \\
+    $(aP+bP')(\varnothing)=aP(\varnothing)+bP'(\varnothing)=a(0)+b(0)=0$\\ \\
+    Entonces, la funcion (aP+bP')(x) cumple con la segunda conicion para que sea medida de probabilidad. \\ \\
+    Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
+    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\ 
+    $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
+    Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.
 	}
 
 	% Ejercicio 10
    \item {
     Realice el problema de las cuerdas visto en clase, esta vez con 8 cuerdas.\\
+    
+    La probabilidad de que salga un anillo está dada por \\ \\
+    $P(\Phi)= \frac{\alpha}{\kappa} : \alpha = $ casos favorables, $\kappa$ = casos totales. \\
+    
+    Tenemos que $\kappa$ puede ser contado como $(7*5*3*1)^2$ ya que sin perdida de generalidad tomando las partes de abajo de las cuerdas nos fijamos en alguna de ellas, ésta tiene 7 formas de conectarse con las demás cuerdas abajo, hacemos la unión de las cuerdas y ahora  hay dos cuerdas conectadas, ergo, 6 cuerdas no conectadas, entonces tomamos otra cuerda y ésta tiene 5 cuerdas a las cuales puede conectarse. Ahora quedan 4 cuerdas disponibles sin conectar, tomamos otra cuerda y ésta se puede conectar a 3. Quedan ahora 2 cuerdas disponibles y solo hay una manera de conectarlas. Entonces en la parte de abajo se tienen 7*5*3*1 maneras de conectar cuerdas. Pero se multiplica esa cantidad por si misma pues se hace el mismo procedimiento arriba. Entonces: \\ \\
+    $\kappa= (7*5*3)^2$\\
+    
+    Ahora, tomando los casos favorables tenemos que sin perdida de generalidad nos situamos en las cuerdas de abajo, cualesquiera cuerda se puede unir con 7 cuerdas. Pero la cuerda de arriba ya no se puede unir con la cuerda con la cual se unió la cuerda de abajo pues se haría un anillo entonces la de arriba se puede conectar a 6 cuerdas, no a 7. Y las cuerdas de abajo no se pueden conectar a esa cuerda a la cual se conectó la cuerda de arriba pues se haría otro anillo entonces las de abajo se pueden conectar solamente a 5, no a 6. Y así se hace sucesivamente. Se tiene entonces que los casos favorables son 7!. \\ \\
+    $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2}$
 	}
 
 
