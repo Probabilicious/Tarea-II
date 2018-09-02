@@ -240,17 +240,32 @@ Demuestre
    \item {
   	Si dos estudiantes se seleccionan aleatoriamente ¿Cual es la probabilidad de que al menos uno esté tomando alguna clase de idiomas?\\
 
-		Consideremos el evento contrario $H^c$, es decir que dados dos alumnos, ninguno de
-		ellos estén estudiando idioma.\\
-		Este evento es $(I \cup F \cup A)^c$ y su probabilidad se calculó en el
-		primer inciso como $P((I \cup F \cup A)^c) = 0.5$.\\
-		Entonces la probabilidad de que dos estudiantes no estén estudiando idiomas
-		equivale a realizar el evento dos veces, lo que corresponde a la multiplcación
-		de la probabilidades de los eventos, que en este caso son el mismo.\\
-		$$P(H^c) = 2P((I \cup F \cup A)^c) = 2(0.5) = 0.25$$
-		Entonces, la probabilidad de que al menos uno de los estudiantes esté tomando
-		un idioma es \\
-		$$P(H) = 1 - P(H^c) = 1 - 0.25 = 0.75$$
+		Llamemos a este evento $A$.\\
+		Consideremos el evento contrario, es decir que escogiendo dos personas 
+		aleatoriamente, ninguna esté estudiando un idioma.\\
+		En el inciso anterior se calculó la probabiliad de no estar estudiando ningún idioma como 0.5.\\ 
+		Teniendo en cuenta que hay 100 estudiantes, esto significa 
+		50 alumnos que no estudian idiomas.\\
+		Entonces la probabilidad de elegir a dos estudiante que no lleven idiomas es la cantidad de maneras de elegir dos estudiantes del conjunto de estudiantes que no llevan idioma entre la cantidad 
+		total de maneras de elegir dos estudiantes.\\
+		Esto es
+ 		\begin{equation*}
+		P(A^c)  = \frac{\binom{50}{2}}{\binom{100}{2}}
+                = \frac{(50)(49)}{(100)(99)}
+                = \frac{49}{(2)(99)}
+                = \frac{49}{198}
+		\end{equation*}
+		Entonces la probabilida de $A$ es 
+		
+        \begin{equation*}
+        P(A)    = 1 - P(A^c)
+                = 1 - \frac{49}{198}
+                = \frac{198 - 49}{198}
+                = \frac{149}{198}
+                \approx 0.752
+        \end{equation*}
+		
+
 
    }
 
