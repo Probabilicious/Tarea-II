@@ -366,7 +366,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Demuestre que:\\
 	\begin{center}
 	$P(E \cup F \cup G) = P(E) + P(F) + P(G) - P(E^c \cap F \cap G) -P(E \cap F^c \cap G) - P(E \cap F \cap G^c)-2P(E \cap F \cap G)$ \\
-
+	
 	\end{center}
 	Por el inciso anterior sabemos que al desarrollar el lado izquierdo tenemos que:\\
 	$P(E)+P(F)+P(G)-P(F\cap E)-P(F\cap G) -P( G\cap E)+P(F\cap E \cap G)$\\
@@ -377,9 +377,9 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	Esto implica que:\\
 	$P(E)+P(F)+P(G)-P(E^c \cap F \cap G)-P(E \cap F^c \cap G)-P(E \cap F \cap G^c)-2P(E\cap F \cap G)=$\\
 	$P(E)+P(F)+P(G)-P(F\cap G)-P(E\cap G)-P(F\cap E) +3P(F\cap G \cap E) -2P(E\cap G \cap F)=$\\
-	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\
+	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\ 
 	Y esto es igual al lado izquierdo. Por lo tanto ambos lados son iguales. La igualdad se cumple $_{\blacksquare}$
-
+	
 	}
 
 	% Ejercicio 9
@@ -395,7 +395,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $a=1-b$\\
     $b=1-a$\\
     Pero por hipotesis a,b son numeros no negativos esto implica que:\\
-    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \
+    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \           
     $1-a \geq 0 \rightarrow 1\geq a \geq 0$ \\
     Entonces a,b son numeros positivos que se encuentra entre 0 y 1. \\
     Sabemos que:\\
@@ -416,7 +416,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $(aP+bP')(\varnothing)=aP(\varnothing)+bP'(\varnothing)=a(0)+b(0)=0$\\ \\
     Entonces, la funcion (aP+bP')(x) cumple con la segunda conicion para que sea medida de probabilidad. \\ \\
     Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
-    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\
+    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\ 
     $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
     Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.
 	}
@@ -424,13 +424,13 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	% Ejercicio 10
    \item {
     Realice el problema de las cuerdas visto en clase, esta vez con 8 cuerdas.\\
-
+    
     La probabilidad de que salga un anillo está dada por \\ \\
     $P(\Phi)= \frac{\alpha}{\kappa} : \alpha = $ casos favorables, $\kappa$ = casos totales. \\
-
+    
     Tenemos que $\kappa$ puede ser contado como $(7*5*3*1)^2$ ya que sin perdida de generalidad tomando las partes de abajo de las cuerdas nos fijamos en alguna de ellas, ésta tiene 7 formas de conectarse con las demás cuerdas abajo, hacemos la unión de las cuerdas y ahora  hay dos cuerdas conectadas, ergo, 6 cuerdas no conectadas, entonces tomamos otra cuerda y ésta tiene 5 cuerdas a las cuales puede conectarse. Ahora quedan 4 cuerdas disponibles sin conectar, tomamos otra cuerda y ésta se puede conectar a 3. Quedan ahora 2 cuerdas disponibles y solo hay una manera de conectarlas. Entonces en la parte de abajo se tienen 7*5*3*1 maneras de conectar cuerdas. Pero se multiplica esa cantidad por si misma pues se hace el mismo procedimiento arriba. Entonces: \\ \\
     $\kappa= (7*5*3)^2$\\
-
+    
     Ahora, tomando los casos favorables tenemos que sin perdida de generalidad nos situamos en las cuerdas de abajo, cualesquiera cuerda se puede unir con 7 cuerdas. Pero la cuerda de arriba ya no se puede unir con la cuerda con la cual se unió la cuerda de abajo pues se haría un anillo entonces la de arriba se puede conectar a 6 cuerdas, no a 7. Y las cuerdas de abajo no se pueden conectar a esa cuerda a la cual se conectó la cuerda de arriba pues se haría otro anillo entonces las de abajo se pueden conectar solamente a 5, no a 6. Y así se hace sucesivamente. Se tiene entonces que los casos favorables son 7!. \\ \\
     $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2}$
 	}
@@ -466,23 +466,72 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	  %Ejercicio 13
   \item{
   Dé un ejemplo de un espacio de probabilidad tal que tres eventos $A_{1},A_{2},A_{3}$ satisfagan que $P(A_{i} \cap A_{j})=P(A_{i})P(A_{j})$ para $i\neq j$ pero que no sean independientes.
+  
+  Propongamos el siguiente espacio de probabilidad donde se busca la probabilidad de que aparezca algún elemento del conjunto:\\
+  $\Omega = \lbrace a_{1}, a_{2}, a_{3}, a_{4} \rbrace$\\
+  $A_{1} = \lbrace a_{1}, a_{2} \rbrace$, $A_{2} = \lbrace a_{2}, a_{3} \rbrace$ y $A_{3} =  \lbrace a_{3}, a_{1} \rbrace$\\
+  De ahí, $P(A_{1}) = 0.5$, $P(A_{2}) = 0.5$ y $P(A_{3}) = 0.5$.\\\\
+  Tenemos que:\\
+  $P(A_{1} \cap A_{2}) = 0.25 = P(A_{1})P(A_{2})$\\
+  $P(A_{2} \cap A_{3}) = 0.25 = P(A_{2})P(A_{3})$\\
+  $P(A_{1} \cap A_{3}) = 0.25 = P(A_{1})P(A_{3})$\\
+  
+  Si los 3 eventos fueran independientes, significaría que: \\$P(A_{1} \cap A_{2} \cap A_{3}) = P(A_{1})P(A_{2})P(A_{3})$\\  
+  Veamos si es así:\\
+  $P(A_{1} \cap A_{2} \cap A_{3}) = 0$\\
+  $P(A_{1})P(A_{2})P(A_{3}) = 0.125$\\
+  $ 0  \neq 0.125$ \\
+  Por lo tanto los tres eventos no son independientes y el ejemplo cumple con la hipótesis.\\ 
   }
 
 
 		  %Ejercicio 14
   \item{
  Sea $(\Omega, F, P)$ un espacio de probabilidad. Considere $\lbrace A_{i} \rbrace_{i=1}^{\infty} \subseteq F$. Demuestre que si para todo $i \in N$ se cumple que $P(A_{i})=1$ entonces $P((\bigcap\limits_{i=1}^{\infty}A_{i})=1$
+  
+Utilizando la propiedad de complemento y la desigualdad de Boole, tenemos que:
+\begin{align*}
+P((\bigcap\limits_{i=1}^{\infty}A_{i}) &= 1 - (P(\bigcap\limits_{i=1}^{\infty}A_{i})^c) \\
+&= 1- P(\bigcup\limits_{i=1}^{\infty}A^c_{i}) \\
+&\geqslant 1- \sum_{i=1}^{\infty} P(A^c_{i}) \\
+&\geqslant 1- \sum_{i=1}^{\infty} (1- P(A_{i})) \\
+&\geqslant 1- \sum_{i=1}^{\infty} (1- 1) \\
+&\geqslant 1- \sum_{i=1}^{\infty} (0) \\
+&= 1 _{\blacksquare}
+\end{align*}
+Ya que todas las $P(A_{i})$ son iguales a 1, tenemos que la desigualdad está acotada por arriba y por abajo para darnos de resultado final 1.
+
+  
+  
   }
 
   		  %Ejercicio 15
   \item{
- Demuestre que la intersección de dos $\sigma$-algebras es $\sigma$-algebras.
+ Demuestre que la intersección de dos $\sigma$-algebras es $\sigma$-algebras.\\
+ 
+Sea $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ dos $\sigma$-álgebras de subconjuntos de $\Omega$. 
+Entonces $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es la colección de subconjuntos de $\Omega$ cuyos elementos pertenecen tanto a $\mathcal{F}_{1}$ como a $\mathcal{F}_{2}$.
+Ahora demostremos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ cumple las 3 propiedades de una $\sigma$-álgebra:\\
+ 	Como  $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ son $\sigma$-álgebras, entonces $\Omega 	\in \mathcal{F}_{1}$ y $\Omega \in \mathcal{F}_{1}$. Por lo tanto, $\Omega \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ...(1)\\
+ 	Sea A un elemento en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A \in \mathcal{F}_{1}$ y $A \in \mathcal{F}_{2}$. Por lo tanto, $A^c \in \mathcal{F}_{1}$ y $A^c \in \mathcal{F}_{2}$, es decir, $A^c \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ... (2)\\
+ 	Sea $A_{1},A_{2},...$ una sucesión de elementos en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A_{1},A_{2},... \in \mathcal{F}_{1}$ y $A_{1},A_{2},... \in \mathcal{F}_{2}$. Por lo tanto, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1}$ y  $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{2}$. De donde tenemos que, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1} \cap \mathcal{F}_{2}$...(3)\\
+ 	\\De (1), (2) y (3) tenemos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es una  $\sigma$-álgebra. $_{\blacksquare}$
+ 	
   }
 
 
   	  %Ejercicio 16
   \item{
-Si 4 matrimonios son acomodados aleatoriamente en una fila ¿cual es la probabilidad de que (ella me ame) ningún hombre quede sentado junto a su esposa?
+Si 4 matrimonios son acomodados aleatoriamente en una fila ¿cual es la probabilidad de que ningún hombre quede sentado junto a su esposa?\\
+
+Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta junto, se sigue que la probabilidad deseada es $1 - P(\bigcup\limits_{i=1}^{4}E_{i})$. Ahora, de la ley de inclusión-exclusión tenemos que:
+\\$P(\bigcup\limits_{i=1}^{4}E_{i}) = \sum_{i=1}^{4} P(E_{i}) - ... + (-1)^{n-1}\sum_{i_{1} < i_{2} < ... < i_{n}}P(E_{i_{1}}E_{i_{2}}...E_{i_{n}}) + ... - P(E_{1}E_{2}...E_{4})$.\\
+\\Para calcular $E_{i_{1}}E_{i_{2}}...E_{i_{n}}$, primero tenemos que notar que hay 8! maneras de acomodar a 8 personas en una fila. El número de arreglos que resulta en un conjunto específico de $n$ hombres sentados con sus esposas puede ser obtenido de pensar en cada uno de los $n$ matrimonios como entidades solas. Entonces tenemos $(8-n)!$ arreglos. Finalmente, como cada uno de los $n$ matrimonios puede acomodarse uno junto al otro en una de dos posibles maneras, se sigue que hay $2^n(8-n)!$ arreglos que resultan en un conjunto específico de $n$ hombres que se sientan junto a sus esposas. Por lo tanto,\\
+\\$P(E_{i_{1}}E_{i_{2}}...E_{i_{n}}) = \frac{2^n(8-n)!}{(8!)}$.\\
+\\Entonces, de la ley de inclusión-exclusión obtenemos que la probabilidad de que al menos un matrimonio se siente junto es de:\\
+\\$ (\Comb{4}{1})\frac{(2^1)(7!)}{(8!)} - (\Comb{4}{2})\frac{(2^2)(6!)}{(8!)} + (\Comb{4}{3})\frac{(2^3)(5!)}{(8!)} - (\Comb{4}{4})\frac{(2^4)(4!)}{(8!)} \approx 0.6571$\\
+\\La probabilidad deseada es de aproximadamente 0.3428.
+
   }
 
   	  %Ejercicio 17
