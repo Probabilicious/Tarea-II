@@ -243,7 +243,7 @@ Demuestre
 		Llamemos a este evento $A$.\\
 		Consideremos el evento contrario, es decir que escogiendo dos personas
 		aleatoriamente, ninguna esté estudiando un idioma.\\
-		En el inciso anterior se calculó la probabiliad de no estar estudiando ningún idioma como 0.5.\\
+		En el inciso anterior se calculó la probabilidad de no estar estudiando ningún idioma como 0.5.\\
 		Teniendo en cuenta que hay 100 estudiantes, esto significa
 		50 alumnos que no estudian idiomas.\\
 		Entonces la probabilidad de elegir a dos estudiante que no lleven idiomas es la cantidad de maneras de elegir dos estudiantes del conjunto de estudiantes que no llevan idioma entre la cantidad
@@ -438,7 +438,31 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 
 	% Ejercicio 11
    \item {
-   	Suponga que un experimento se realiza n veces. Para cualquier evento E del espacio muestral considere v(E) el número de veces que el evento E ocurrió. sea g(E)=v(E)/n. Demuestre que g satisface los axiomas de probabilidad.\\
+   	Suponga que un experimento se realiza $n$ veces. Para cualquier evento $E$ del
+	espacio muestral considere $v(E)$ el número de veces que el evento $E$ ocurrió.
+	sea $g(E)=v(E)/n$. Demuestre que $g$ satisface los axiomas de probabilidad.\\
+
+	I)\\
+		Se tiene por hipótesis que el experimento $E$ se realiza exactamente $n$
+		veces, y como por definición, el espacio muestral es el conjunto de
+		todos los posibles resultados de un experimento (existen $n$ posibles
+		resultados para el experimento), se sigue que
+			$$ g(\Omega) = \frac{v(\Omega)}{n} = \frac{n}{n} = 1$$
+
+	II)\\
+		Como por definición, $v(E)$ cuenta las veces que se realiza el experimento,
+		y dicho experimento se realiza $n$ veces, se cumple que:
+			$$ n \geq v(E) \geq 0$$
+		luego, dividiendo entre $n$, la desigualdad no se afecta, y se tiene:
+			$$ \frac{n}{n} \geq \frac{v(E)}{n} \geq \frac{0}{n}$$
+			$$ 1 \geq \frac{v(E)}{n} \geq 0$$
+		como por definición, se tiene que $g(E) = \frac{v(E)}{n}$, se sigue
+			$$ 1 \geq g(E) \geq 0$$
+		así, se cumple que $P(E) \geq 0$.
+
+
+	III)\\
+		
 	}
 
 % Ejercicio 12
@@ -536,7 +560,38 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 
   	  %Ejercicio 17
   \item{
-Un closet contiene 10 pares de zapatos. Si 8 de ellos se seleccionan al azar ¿cual es la probabilidad de que no se complete ningun par? ¿Cual es la probabilidad de que se complete exactamente un par?
+	Un closet contiene 10 pares de zapatos. Si 8 de ellos se seleccionan al
+	azar ¿cual es la probabilidad de que no se complete ningun par? ¿Cual es la
+	probabilidad de que se complete exactamente un par?
+
+	I)\\
+	Sea $P(A)$ la probabilidad de que no se complete ningún par.\\
+	Como no debe completarse ningún par al tomar los ocho zapatos, debemos
+	elegir a lo más un zapato de cada posible par. Así, elegimos ocho pares de
+	los diez disponibles, esto está dado mediante:
+		$${10}\choose{8}$$
+	Luego, de los ocho pares, contamos las formas en las que podemos elegir un
+	zapato de cada uno de ellos, esto es:
+		$$2^8$$
+	puesto que por cada par podemos elegir el zapato izquierdo o el derecho.
+	Así, los casos favorables entre el número total de formas de elegir
+	ocho zapatos de entre veinte ${20}\choose{8}$, nos dan la probabilidad del
+	evento, a saber:
+		$$P(A) = \frac{ {10 \choose 8} 2^8 }{ {20 \choose 8} } \approx 0.0914 $$
+
+	II)\\
+	Sea $P(A)$ la probabilidad de que se complete exactamente un par.\\
+	Para esto, fijamos un par de zapatos, (el cual es el único que se va a
+	completar), así, tenemos
+		$${10 \choose 1} = 10$$
+	formas de escoger exactamente un par.
+	Luego, para los seis zapatos restantes, fijamos un zapato por par, de forma
+	que no se complete otro par, es decir, escogemos seis zapatos de entre los
+	nueve pares restantes, esto está dado por
+		$${9}\choose{6}$$
+	y podemos elegir un zapato de cada par de $2^6$ maneras distintas, así, la
+	probabilidad del evento está dada por:
+		$$P(A) = \frac{ {9 \choose 6} 2^6 * 10}{ {20 \choose 8} } \approx 0.4267 $$
   }
 
     %Ejercicio 18
@@ -546,7 +601,21 @@ Un closet contiene 10 pares de zapatos. Si 8 de ellos se seleccionan al azar ¿c
 
      %Ejercicio 19
   \item{
-	Supongamos que hay 12 estudiantes en un salón. ¿Cual es la probabilidad de que dos de ellos no celebren su cumpleaños en el mismo mes?
+	Supongamos que hay 12 estudiantes en un salón. ¿Cual es la probabilidad de
+	que dos de ellos no celebren su cumpleaños en el mismo mes?\\
+
+	Sea $P(A)$ la probabilidad de que dos personas no celeben su cumpleaños en el
+	mismo mes.\\
+
+	Se tiene que cada persona puede celebrar su cumpleaños en uno de entre doce
+	meses, así, el número de casos totales para 12 personas está dado por
+		$$12^{12}$$
+	luego, la primera persona puede cumplir su cumpleaños de doce maneras distintas
+	(una por cada mes), la segunda de once maneras distintas (puesto que no puede
+	cumplir años el mismo mes que la primera), y así sucesivamente, de tal forma
+	que:
+		$$P(A) = \frac{12 * 11 * 10 * .... * 1}{12^{12}} = \frac{12!}{12^{12}}
+				\approx 0.000053723$$
   }
 
 
