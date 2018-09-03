@@ -1,4 +1,4 @@
-% ====== TAREA 1 DE PROBABILIDAD ======
+% ====== TAREA 2 DE PROBABILIDAD ======
 
 \documentclass[12pt,a4paper]{report}
 \usepackage[utf8x]{inputenc}
@@ -339,7 +339,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	Y además, por teoría de conjuntos: \textbf{Afirmacion} $A^c \cap B = B-A$ por lo que:\\
 	$P(A^c \cap B) = P(B-A)$ y:\\
 	\textbf{Definicion:}$P(B-A)=P(B)-P(A \cap B)$ $\therefore$\\
-	$P(A^C \cap B) - P(A^c)P(B)= P(B)-P(A\cap B)+P(A)P(B)-P(B)=P(A)P(B)-P(A\cap B)_{\blacksquare}$
+	$P(A^C \cap B) - P(A^c)P(B)= P(B)-P(A\cap B)+P(A)P(B)-P(B)=P(A)P(B)-P(A\cap B)_{\blacksquare}$\\
 	}
 
 	% Ejercicio 7
@@ -347,7 +347,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Demuestre que:\\
 	$$P(A \cup B \cup D) = P(A)+P(A^c \cap B) +P(A^c \cap B^c \cap D)$$\\
 	Desarrollando el lado izquierdo tenemos que:\\
-	$P(A \cup B \cup D) = P(A \cup (B\cup D))=P(A)+P(B\cup D) - P(A \cap (B\cup D)) = P(A)+P(B)+P(D)-P(B\cap D)-P((A\cap B) \cup (A \cap D))= \\ P(A)+P(B)+P(D)-P(B \cap D) -P(A\cap B) -P(A\cap D) +P(A\cap B \cap D)  \textbf{(1)}$\\
+	$P(A \cup B \cup D) = P(A \cup (B\cup D))=P(A)+P(B\cup D) - P(A \cap (B\cup D)) = P(A)+P(B)+P(D)-P(B\cap D)-P((A\cap B) \cup (A \cap D))= \\ P(A)+P(B)+P(D)-P(B \cap D) -P(A\cap B) -P(A\cap D) +P(A\cap B \cap D)  \textbf{(1)}$\\\\
 	Y desarrollando el lado derecho tenemos que:\\
 	Por lo visto en el inciso anterior: $P(A^c \cap B) = P(B-A) = P(B)-P(A\cap B)$ y tenemos que:\\
 	$P(A^c \cap B^c \cap D) = P( (A^c \cap B^c) \cap D)$ y por teoria de conjuntos: $(A^c \cap B^c) = (A \cup B)^c$ por lo tanto:\\
@@ -357,7 +357,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	$=P(D)-P(D\cap(A\cup B)) = P(D)-P((D\cap A) \cup (D \cap B))=P(D)-P(D\cap A) - P(D \cap B) + P((D\cap A) \cap ( D \cap B))= P(D) -P(D \cap A) - P(D \cap B) + P(D \cap B \cap A)$ entonces en el lado derecho:\\
 	$P(A) + P(A^c \cap B) +P(A^c \cap B^c \cap D) =$\\
 	$P(A)+P(B)-P(A\cap B) +P(D) -P(D\cap A) - P(D\cap B) +P(D\cap B \cap A) =$ \\
-	$P(A)+P(B)+P(D)-P(A \cap B) -P(D\cap B) -P(D\cap A) +P(D\cap A \cap B) \textbf{(2)}$ \\
+	$P(A)+P(B)+P(D)-P(A \cap B) -P(D\cap B) -P(D\cap A) +P(D\cap A \cap B) \textbf{(2)}$ \\\\
 	Como la intersección es conmutativa entonces el lado izquierdo y derecho son iguales al ser desarrollados. Por lo tanto la igualdad se cumple. $_{\blacksquare}$
 	}
 
