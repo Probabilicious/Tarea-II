@@ -418,7 +418,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
     $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\ 
     $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
-    Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.
+    Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.\\
 	}
 
 	% Ejercicio 10
@@ -441,15 +441,15 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
    	Suponga que un experimento se realiza $n$ veces. Para cualquier evento $E$ del
 	espacio muestral considere $v(E)$ el número de veces que el evento $E$ ocurrió.
 	sea $g(E)=v(E)/n$. Demuestre que $g$ satisface los axiomas de probabilidad.\\
-
-	I)\\
+	\begin{enumerate}[label=\Roman*.]
+	\item{
 		Se tiene por hipótesis que el experimento $E$ se realiza exactamente $n$
 		veces, y como por definición, el espacio muestral es el conjunto de
 		todos los posibles resultados de un experimento (existen $n$ posibles
 		resultados para el experimento), se sigue que
 			$$ g(\Omega) = \frac{v(\Omega)}{n} = \frac{n}{n} = 1$$
-
-	II)\\
+	}
+	\item{
 		Como por definición, $v(E)$ cuenta las veces que se realiza el experimento,
 		y dicho experimento se realiza $n$ veces, se cumple que:
 			$$ n \geq v(E) \geq 0$$
@@ -459,9 +459,11 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 		como por definición, se tiene que $g(E) = \frac{v(E)}{n}$, se sigue
 			$$ 1 \geq g(E) \geq 0$$
 		así, se cumple que $P(E) \geq 0$.
+	}
+	\item{
+	}
+	\end{enumerate}
 
-
-	III)\\
 		
 	}
 
@@ -539,7 +541,7 @@ Ahora demostremos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ cumple las 3 propie
  	Como  $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ son $\sigma$-álgebras, entonces $\Omega 	\in \mathcal{F}_{1}$ y $\Omega \in \mathcal{F}_{1}$. Por lo tanto, $\Omega \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ...(1)\\
  	Sea A un elemento en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A \in \mathcal{F}_{1}$ y $A \in \mathcal{F}_{2}$. Por lo tanto, $A^c \in \mathcal{F}_{1}$ y $A^c \in \mathcal{F}_{2}$, es decir, $A^c \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ... (2)\\
  	Sea $A_{1},A_{2},...$ una sucesión de elementos en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A_{1},A_{2},... \in \mathcal{F}_{1}$ y $A_{1},A_{2},... \in \mathcal{F}_{2}$. Por lo tanto, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1}$ y  $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{2}$. De donde tenemos que, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1} \cap \mathcal{F}_{2}$...(3)\\
- 	\\De (1), (2) y (3) tenemos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es una  $\sigma$-álgebra. $_{\blacksquare}$
+ 	\\De (1), (2) y (3) tenemos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es una  $\sigma$-álgebra. $_{\blacksquare}$\\
  	
   }
 
@@ -553,7 +555,7 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 \\Para calcular $E_{i_{1}}E_{i_{2}}...E_{i_{n}}$, primero tenemos que notar que hay 8! maneras de acomodar a 8 personas en una fila. El número de arreglos que resulta en un conjunto específico de $n$ hombres sentados con sus esposas puede ser obtenido de pensar en cada uno de los $n$ matrimonios como entidades solas. Entonces tenemos $(8-n)!$ arreglos. Finalmente, como cada uno de los $n$ matrimonios puede acomodarse uno junto al otro en una de dos posibles maneras, se sigue que hay $2^n(8-n)!$ arreglos que resultan en un conjunto específico de $n$ hombres que se sientan junto a sus esposas. Por lo tanto,\\
 \\$P(E_{i_{1}}E_{i_{2}}...E_{i_{n}}) = \frac{2^n(8-n)!}{(8!)}$.\\
 \\Entonces, de la ley de inclusión-exclusión obtenemos que la probabilidad de que al menos un matrimonio se siente junto es de:\\
-\\$ (\Comb{4}{1})\frac{(2^1)(7!)}{(8!)} - (\Comb{4}{2})\frac{(2^2)(6!)}{(8!)} + (\Comb{4}{3})\frac{(2^3)(5!)}{(8!)} - (\Comb{4}{4})\frac{(2^4)(4!)}{(8!)} \approx 0.6571$\\
+\\$ {4 \choose 1}\frac{(2^1)(7!)}{(8!)} - {4 \choose 2}\frac{(2^2)(6!)}{(8!)} + {4 \choose 3}\frac{(2^3)(5!)}{(8!)} - {4 \choose 4}\frac{(2^4)(4!)}{(8!)} \approx 0.6571$\\
 \\La probabilidad deseada es de aproximadamente 0.3428.
 
   }
@@ -564,7 +566,8 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 	azar ¿cual es la probabilidad de que no se complete ningun par? ¿Cual es la
 	probabilidad de que se complete exactamente un par?
 
-	I)\\
+	\begin{enumerate}
+	\item{
 	Sea $P(A)$ la probabilidad de que no se complete ningún par.\\
 	Como no debe completarse ningún par al tomar los ocho zapatos, debemos
 	elegir a lo más un zapato de cada posible par. Así, elegimos ocho pares de
@@ -578,8 +581,9 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 	ocho zapatos de entre veinte ${20}\choose{8}$, nos dan la probabilidad del
 	evento, a saber:
 		$$P(A) = \frac{ {10 \choose 8} 2^8 }{ {20 \choose 8} } \approx 0.0914 $$
-
-	II)\\
+	}
+	
+	\item{
 	Sea $P(A)$ la probabilidad de que se complete exactamente un par.\\
 	Para esto, fijamos un par de zapatos, (el cual es el único que se va a
 	completar), así, tenemos
@@ -592,6 +596,8 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 	y podemos elegir un zapato de cada par de $2^6$ maneras distintas, así, la
 	probabilidad del evento está dada por:
 		$$P(A) = \frac{ {9 \choose 6} 2^6 * 10}{ {20 \choose 8} } \approx 0.4267 $$
+	}
+	\end{enumerate}  
   }
 
     %Ejercicio 18
