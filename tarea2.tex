@@ -14,7 +14,7 @@
 \begin{document}
 \begin{titlepage}
 	\centering
-	{\scshape\LARGE Universidad Autónoma de México \par}
+	{\scshape\LARGE Universidad Nacional Autónoma de México \par}
 	\vspace{1cm}
 	{\scshape\Large Probabilidad I\par}
 	\vspace{1.5cm}
@@ -366,7 +366,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Demuestre que:\\
 	\begin{center}
 	$P(E \cup F \cup G) = P(E) + P(F) + P(G) - P(E^c \cap F \cap G) -P(E \cap F^c \cap G) - P(E \cap F \cap G^c)-2P(E \cap F \cap G)$ \\
-	
+
 	\end{center}
 	Por el inciso anterior sabemos que al desarrollar el lado izquierdo tenemos que:\\
 	$P(E)+P(F)+P(G)-P(F\cap E)-P(F\cap G) -P( G\cap E)+P(F\cap E \cap G)$\\
@@ -377,9 +377,9 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	Esto implica que:\\
 	$P(E)+P(F)+P(G)-P(E^c \cap F \cap G)-P(E \cap F^c \cap G)-P(E \cap F \cap G^c)-2P(E\cap F \cap G)=$\\
 	$P(E)+P(F)+P(G)-P(F\cap G)-P(E\cap G)-P(F\cap E) +3P(F\cap G \cap E) -2P(E\cap G \cap F)=$\\
-	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\ 
+	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\
 	Y esto es igual al lado izquierdo. Por lo tanto ambos lados son iguales. La igualdad se cumple $_{\blacksquare}$
-	
+
 	}
 
 	% Ejercicio 9
@@ -395,7 +395,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $a=1-b$\\
     $b=1-a$\\
     Pero por hipotesis a,b son numeros no negativos esto implica que:\\
-    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \           
+    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \
     $1-a \geq 0 \rightarrow 1\geq a \geq 0$ \\
     Entonces a,b son numeros positivos que se encuentra entre 0 y 1. \\
     Sabemos que:\\
@@ -416,7 +416,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $(aP+bP')(\varnothing)=aP(\varnothing)+bP'(\varnothing)=a(0)+b(0)=0$\\ \\
     Entonces, la funcion (aP+bP')(x) cumple con la segunda conicion para que sea medida de probabilidad. \\ \\
     Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
-    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\ 
+    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\
     $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
     Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.
 	}
@@ -424,13 +424,13 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	% Ejercicio 10
    \item {
     Realice el problema de las cuerdas visto en clase, esta vez con 8 cuerdas.\\
-    
+
     La probabilidad de que salga un anillo está dada por \\ \\
     $P(\Phi)= \frac{\alpha}{\kappa} : \alpha = $ casos favorables, $\kappa$ = casos totales. \\
-    
+
     Tenemos que $\kappa$ puede ser contado como $(7*5*3*1)^2$ ya que sin perdida de generalidad tomando las partes de abajo de las cuerdas nos fijamos en alguna de ellas, ésta tiene 7 formas de conectarse con las demás cuerdas abajo, hacemos la unión de las cuerdas y ahora  hay dos cuerdas conectadas, ergo, 6 cuerdas no conectadas, entonces tomamos otra cuerda y ésta tiene 5 cuerdas a las cuales puede conectarse. Ahora quedan 4 cuerdas disponibles sin conectar, tomamos otra cuerda y ésta se puede conectar a 3. Quedan ahora 2 cuerdas disponibles y solo hay una manera de conectarlas. Entonces en la parte de abajo se tienen 7*5*3*1 maneras de conectar cuerdas. Pero se multiplica esa cantidad por si misma pues se hace el mismo procedimiento arriba. Entonces: \\ \\
     $\kappa= (7*5*3)^2$\\
-    
+
     Ahora, tomando los casos favorables tenemos que sin perdida de generalidad nos situamos en las cuerdas de abajo, cualesquiera cuerda se puede unir con 7 cuerdas. Pero la cuerda de arriba ya no se puede unir con la cuerda con la cual se unió la cuerda de abajo pues se haría un anillo entonces la de arriba se puede conectar a 6 cuerdas, no a 7. Y las cuerdas de abajo no se pueden conectar a esa cuerda a la cual se conectó la cuerda de arriba pues se haría otro anillo entonces las de abajo se pueden conectar solamente a 5, no a 6. Y así se hace sucesivamente. Se tiene entonces que los casos favorables son 7!. \\ \\
     $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2}$
 	}
