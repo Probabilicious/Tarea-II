@@ -301,7 +301,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	$P(I-(II\cup III))+P(II-(I \cup III))+P(III-(II \cup I))=$\\
 	$P(I)-P(I \cap (II \cup III))+P(II)-P(II \cap (I \cup III))+P(III)-P(III\cap (II\cup I))=$ \\
 	$P(I)+P(II)+P(III)-P((I\cap II)\cup(I \cap III))-P((II\cap I)\cup(II \cap III))-P((III\cap II)\cup(III \cap I))=$\\
-	$P(I)+P(II)+P(III)-2P(I\cap II)-2P(I\cap III)-2P(II \cap III)+3P(I\cap II \cap III)$ \\
+	$P(I)+P(II)+P(III)-2P(I\cap II)-2P(I\cap III)-2P(II \cap III)+3P(I\cap II \cap III)$ \\\\
 	Como sabemos cada una de ellas esto es:\\
 	$.10+.30+.05-2(.08)-2(.02)-2(.01)+3(.01)=.10+.30+.05-.16-.04-.02+0.3=.26$\\
 	Esto quiere decir que el 26 por ciento de la poblacion lee solamente un periodico. Son 100,000 habitantes por lo tanto 26,000 personas leen solamente un periodico.
@@ -385,6 +385,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	% Ejercicio 9
    \item {
     Demuestre que si P y P' son dos medidas de probabilidad definidas sobre el mismo espacio muestral (E), antonces aP+bP' es también una medida de probabilidad, para cualesquiera dos números no negativos a,b que satisfacen a+b=1\\
+
     \textbf{Definición:} Una medida de probabilidad P es una función que asigna a cada elemento A del $\sigma-$algebra un numero entre 0 y 1. Y además que cumple que:\\
     $0 \leq P(A) \leq 1 : A \in \sigma(a)\subseteq \wp(E)$\\
     $P(E)=1, P(\varnothing)=0$\\
@@ -418,7 +419,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
     $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\
     $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
-    Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.\\
+    Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.$_{\blacksquare}$\\
 	}
 
 	% Ejercicio 10
@@ -432,7 +433,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $\kappa= (7*5*3)^2$\\
 
     Ahora, tomando los casos favorables tenemos que sin perdida de generalidad nos situamos en las cuerdas de abajo, cualesquiera cuerda se puede unir con 7 cuerdas. Pero la cuerda de arriba ya no se puede unir con la cuerda con la cual se unió la cuerda de abajo pues se haría un anillo entonces la de arriba se puede conectar a 6 cuerdas, no a 7. Y las cuerdas de abajo no se pueden conectar a esa cuerda a la cual se conectó la cuerda de arriba pues se haría otro anillo entonces las de abajo se pueden conectar solamente a 5, no a 6. Y así se hace sucesivamente. Se tiene entonces que los casos favorables son 7!. \\ \\
-    $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2}$
+    $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2} \approx 0.4571$
 	}
 
 
@@ -484,7 +485,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 			$$ = \sum_{i=1}^{\infty} g(E_i)  $$
 
 		\begin{flushright}
-			$_{\square}$
+			$_{\blacksquare}$
 		\end{flushright}
 	}
 	\end{enumerate}
