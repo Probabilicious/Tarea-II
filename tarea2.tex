@@ -366,7 +366,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     Demuestre que:\\
 	\begin{center}
 	$P(E \cup F \cup G) = P(E) + P(F) + P(G) - P(E^c \cap F \cap G) -P(E \cap F^c \cap G) - P(E \cap F \cap G^c)-2P(E \cap F \cap G)$ \\
-	
+
 	\end{center}
 	Por el inciso anterior sabemos que al desarrollar el lado izquierdo tenemos que:\\
 	$P(E)+P(F)+P(G)-P(F\cap E)-P(F\cap G) -P( G\cap E)+P(F\cap E \cap G)$\\
@@ -377,9 +377,9 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	Esto implica que:\\
 	$P(E)+P(F)+P(G)-P(E^c \cap F \cap G)-P(E \cap F^c \cap G)-P(E \cap F \cap G^c)-2P(E\cap F \cap G)=$\\
 	$P(E)+P(F)+P(G)-P(F\cap G)-P(E\cap G)-P(F\cap E) +3P(F\cap G \cap E) -2P(E\cap G \cap F)=$\\
-	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\ 
+	$P(E)+P(F)+P(G)-P(F\cap G) - P(E \cap G) - P(F \cap E) +P(F\cap G \cap E)$\\
 	Y esto es igual al lado izquierdo. Por lo tanto ambos lados son iguales. La igualdad se cumple $_{\blacksquare}$
-	
+
 	}
 
 	% Ejercicio 9
@@ -395,7 +395,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $a=1-b$\\
     $b=1-a$\\
     Pero por hipotesis a,b son numeros no negativos esto implica que:\\
-    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \           
+    $1-b \geq 0 \rightarrow 1 \geq b \geq 0$ \ \ \ \ \ \ \ \ \ \
     $1-a \geq 0 \rightarrow 1\geq a \geq 0$ \\
     Entonces a,b son numeros positivos que se encuentra entre 0 y 1. \\
     Sabemos que:\\
@@ -416,7 +416,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
     $(aP+bP')(\varnothing)=aP(\varnothing)+bP'(\varnothing)=a(0)+b(0)=0$\\ \\
     Entonces, la funcion (aP+bP')(x) cumple con la segunda conicion para que sea medida de probabilidad. \\ \\
     Ahora supongamos que $A_{i} \cap A_{j} = 0 $ \ \ $\forall i \neq j $ tenemos que:\\ \\
-    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\ 
+    $(aP+bP')(\bigcup\limits_{i=1}^{n} A_{i})=aP(\bigcup\limits_{i=1}^{n} A_{i})+bP'(\bigcup\limits_{i=1}^{n} A_{i})=a( \sum_{i=1}^{n} P(A_{i})) + b( \sum_{i=1}^{n} P'(A_{i}))=$ \\
     $\sum_{i=1}^{n} aP(A_{i})+\sum_{i=1}^{n} bP'(A_{i})= \sum_{i=1}^{n} aP(A_{i})+bP'(A_{i})=$ \\ \\$\sum_{i=1}^{n} (aP+bP')(A_{i})$\\ \\
     Como cumple la tercera y ultima condición tenemos que la función (aP+bP')(x) es efectivamente una medida de probabilidad.\\
 	}
@@ -424,13 +424,13 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	% Ejercicio 10
    \item {
     Realice el problema de las cuerdas visto en clase, esta vez con 8 cuerdas.\\
-    
+
     La probabilidad de que salga un anillo está dada por \\ \\
     $P(\Phi)= \frac{\alpha}{\kappa} : \alpha = $ casos favorables, $\kappa$ = casos totales. \\
-    
+
     Tenemos que $\kappa$ puede ser contado como $(7*5*3*1)^2$ ya que sin perdida de generalidad tomando las partes de abajo de las cuerdas nos fijamos en alguna de ellas, ésta tiene 7 formas de conectarse con las demás cuerdas abajo, hacemos la unión de las cuerdas y ahora  hay dos cuerdas conectadas, ergo, 6 cuerdas no conectadas, entonces tomamos otra cuerda y ésta tiene 5 cuerdas a las cuales puede conectarse. Ahora quedan 4 cuerdas disponibles sin conectar, tomamos otra cuerda y ésta se puede conectar a 3. Quedan ahora 2 cuerdas disponibles y solo hay una manera de conectarlas. Entonces en la parte de abajo se tienen 7*5*3*1 maneras de conectar cuerdas. Pero se multiplica esa cantidad por si misma pues se hace el mismo procedimiento arriba. Entonces: \\ \\
     $\kappa= (7*5*3)^2$\\
-    
+
     Ahora, tomando los casos favorables tenemos que sin perdida de generalidad nos situamos en las cuerdas de abajo, cualesquiera cuerda se puede unir con 7 cuerdas. Pero la cuerda de arriba ya no se puede unir con la cuerda con la cual se unió la cuerda de abajo pues se haría un anillo entonces la de arriba se puede conectar a 6 cuerdas, no a 7. Y las cuerdas de abajo no se pueden conectar a esa cuerda a la cual se conectó la cuerda de arriba pues se haría otro anillo entonces las de abajo se pueden conectar solamente a 5, no a 6. Y así se hace sucesivamente. Se tiene entonces que los casos favorables son 7!. \\ \\
     $\alpha = 7! \therefore P(\Phi)=\frac{7!}{(7*5*3*2*1)^2}=\frac{7*6!}{7^2(5*3*1)^2}=\frac{6!}{7(5*3)^2}$
 	}
@@ -443,28 +443,53 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	sea $g(E)=v(E)/n$. Demuestre que $g$ satisface los axiomas de probabilidad.\\
 	\begin{enumerate}[label=\Roman*.]
 	\item{
-		Se tiene por hipótesis que el experimento $E$ se realiza exactamente $n$
+		Se tiene por hipótesis que el experimento se realiza exactamente $n$
 		veces, y como por definición, el espacio muestral es el conjunto de
-		todos los posibles resultados de un experimento (existen $n$ posibles
+		todos los posibles resultados asociados a un experimento (existen $n$ posibles
 		resultados para el experimento), se sigue que
 			$$ g(\Omega) = \frac{v(\Omega)}{n} = \frac{n}{n} = 1$$
 	}
 	\item{
-		Como por definición, $v(E)$ cuenta las veces que se realiza el experimento,
-		y dicho experimento se realiza $n$ veces, se cumple que:
+		Dado que un evento puede ocurrir solamente en un número positivo de ocasiones,
+		y por hipótesis no puede ocurrir más de $n$ veces (ya que el experimento se
+		realiza exactamente $n$ veces, con $n$ posibles resultados) se cumple que:
 			$$ n \geq v(E) \geq 0$$
 		luego, dividiendo entre $n$, la desigualdad no se afecta, y se tiene:
 			$$ \frac{n}{n} \geq \frac{v(E)}{n} \geq \frac{0}{n}$$
 			$$ 1 \geq \frac{v(E)}{n} \geq 0$$
 		como por definición, se tiene que $g(E) = \frac{v(E)}{n}$, se sigue
 			$$ 1 \geq g(E) \geq 0$$
-		así, se cumple que $P(E) \geq 0$.
+		así, se cumple que $g(E) \geq 0$.
 	}
 	\item{
+		Consideremos $E_1, E_2, E_3, ... \in \mathcal{F}$ un conjunto de eventos
+		mutuamente excluyentes (i.e. $E_i \cap E_j = \emptyset$, con $i \neq j$).\\
+
+		Ahora, consideremos :
+			$$g\left( \bigcup_{i=1}^{\infty} E_{i} \right)$$
+		luego, por definición de $g(E)$, se sigue:
+			$$g\left( \bigcup_{i=1}^{\infty} E_{i} \right) =
+				\frac{ v\left( \bigcup_{i=1}^{\infty} E_{i} \right)  }{ n }$$
+		ahora, como por hipótesis, los eventos $E_1, E_2, E_3, ...$ son mutuamente
+		excluyentes (no pueden ocurrir de manera simultánea), se sigue que el
+		número de veces que ocurre la unión de todos los eventos, está dada por:
+			$$\sum_{i=1}^{\infty} v(E_{i})$$
+		con $v(E_i)$ el número de veces que ocurre el evento $E_i$. Así, se tiene:
+			$$ g\left( \bigcup_{i=1}^{\infty} E_{i} \right) =
+			\frac{ \sum_{i=1}^{\infty} v(E_{i})  }{ n } $$
+			$$ = \frac{1}{n} \sum_{i=1}^{\infty} v(E_{i}) $$
+			$$ = \sum_{i=1}^{\infty} \frac{1}{n} v(E_{i}) $$
+			$$ = \sum_{i=1}^{\infty} \frac{v(E_{i})}{n}  $$
+		y finalmente, por la definicion de $g$
+			$$ = \sum_{i=1}^{\infty} g(E_i)  $$
+
+		\begin{flushright}
+			$_{\square}$
+		\end{flushright}
 	}
 	\end{enumerate}
 
-		
+
 	}
 
 % Ejercicio 12
@@ -492,7 +517,7 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	  %Ejercicio 13
   \item{
   Dé un ejemplo de un espacio de probabilidad tal que tres eventos $A_{1},A_{2},A_{3}$ satisfagan que $P(A_{i} \cap A_{j})=P(A_{i})P(A_{j})$ para $i\neq j$ pero que no sean independientes.
-  
+
   Propongamos el siguiente espacio de probabilidad donde se busca la probabilidad de que aparezca algún elemento del conjunto:\\
   $\Omega = \lbrace a_{1}, a_{2}, a_{3}, a_{4} \rbrace$\\
   $A_{1} = \lbrace a_{1}, a_{2} \rbrace$, $A_{2} = \lbrace a_{2}, a_{3} \rbrace$ y $A_{3} =  \lbrace a_{3}, a_{1} \rbrace$\\
@@ -501,20 +526,20 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
   $P(A_{1} \cap A_{2}) = 0.25 = P(A_{1})P(A_{2})$\\
   $P(A_{2} \cap A_{3}) = 0.25 = P(A_{2})P(A_{3})$\\
   $P(A_{1} \cap A_{3}) = 0.25 = P(A_{1})P(A_{3})$\\
-  
-  Si los 3 eventos fueran independientes, significaría que: \\$P(A_{1} \cap A_{2} \cap A_{3}) = P(A_{1})P(A_{2})P(A_{3})$\\  
+
+  Si los 3 eventos fueran independientes, significaría que: \\$P(A_{1} \cap A_{2} \cap A_{3}) = P(A_{1})P(A_{2})P(A_{3})$\\
   Veamos si es así:\\
   $P(A_{1} \cap A_{2} \cap A_{3}) = 0$\\
   $P(A_{1})P(A_{2})P(A_{3}) = 0.125$\\
   $ 0  \neq 0.125$ \\
-  Por lo tanto los tres eventos no son independientes y el ejemplo cumple con la hipótesis.\\ 
+  Por lo tanto los tres eventos no son independientes y el ejemplo cumple con la hipótesis.\\
   }
 
 
 		  %Ejercicio 14
   \item{
  Sea $(\Omega, F, P)$ un espacio de probabilidad. Considere $\lbrace A_{i} \rbrace_{i=1}^{\infty} \subseteq F$. Demuestre que si para todo $i \in N$ se cumple que $P(A_{i})=1$ entonces $P((\bigcap\limits_{i=1}^{\infty}A_{i})=1$
-  
+
 Utilizando la propiedad de complemento y la desigualdad de Boole, tenemos que:
 \begin{align*}
 P((\bigcap\limits_{i=1}^{\infty}A_{i}) &= 1 - (P(\bigcap\limits_{i=1}^{\infty}A_{i})^c) \\
@@ -527,22 +552,22 @@ P((\bigcap\limits_{i=1}^{\infty}A_{i}) &= 1 - (P(\bigcap\limits_{i=1}^{\infty}A_
 \end{align*}
 Ya que todas las $P(A_{i})$ son iguales a 1, tenemos que la desigualdad está acotada por arriba y por abajo para darnos de resultado final 1.
 
-  
-  
+
+
   }
 
   		  %Ejercicio 15
   \item{
  Demuestre que la intersección de dos $\sigma$-algebras es $\sigma$-algebras.\\
- 
-Sea $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ dos $\sigma$-álgebras de subconjuntos de $\Omega$. 
+
+Sea $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ dos $\sigma$-álgebras de subconjuntos de $\Omega$.
 Entonces $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es la colección de subconjuntos de $\Omega$ cuyos elementos pertenecen tanto a $\mathcal{F}_{1}$ como a $\mathcal{F}_{2}$.
 Ahora demostremos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ cumple las 3 propiedades de una $\sigma$-álgebra:\\
  	Como  $\mathcal{F}_{1}$ y $\mathcal{F}_{2}$ son $\sigma$-álgebras, entonces $\Omega 	\in \mathcal{F}_{1}$ y $\Omega \in \mathcal{F}_{1}$. Por lo tanto, $\Omega \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ...(1)\\
  	Sea A un elemento en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A \in \mathcal{F}_{1}$ y $A \in \mathcal{F}_{2}$. Por lo tanto, $A^c \in \mathcal{F}_{1}$ y $A^c \in \mathcal{F}_{2}$, es decir, $A^c \in\mathcal{F}_{1} \cap \mathcal{F}_{2}$ ... (2)\\
  	Sea $A_{1},A_{2},...$ una sucesión de elementos en $\mathcal{F}_{1} \cap \mathcal{F}_{2}$. Entonces $A_{1},A_{2},... \in \mathcal{F}_{1}$ y $A_{1},A_{2},... \in \mathcal{F}_{2}$. Por lo tanto, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1}$ y  $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{2}$. De donde tenemos que, $\bigcup\limits_{i=1}^{\infty}A_{i}  \in \mathcal{F}_{1} \cap \mathcal{F}_{2}$...(3)\\
  	\\De (1), (2) y (3) tenemos que $\mathcal{F}_{1} \cap \mathcal{F}_{2}$ es una  $\sigma$-álgebra. $_{\blacksquare}$\\
- 	
+
   }
 
 
@@ -582,7 +607,7 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 	evento, a saber:
 		$$P(A) = \frac{ {10 \choose 8} 2^8 }{ {20 \choose 8} } \approx 0.0914 $$
 	}
-	
+
 	\item{
 	Sea $P(A)$ la probabilidad de que se complete exactamente un par.\\
 	Para esto, fijamos un par de zapatos, (el cual es el único que se va a
@@ -597,12 +622,41 @@ Dejemos $E_{i}, i= 1,2,3,4$ como el evento donde el iésimo matrimonio se sienta
 	probabilidad del evento está dada por:
 		$$P(A) = \frac{ {9 \choose 6} 2^6 * 10}{ {20 \choose 8} } \approx 0.4267 $$
 	}
-	\end{enumerate}  
+	\end{enumerate}
   }
 
     %Ejercicio 18
   \item{
-	Una urna contiene N  bolas numeradas de 1 a N. Las primeras $N_{1}$ son defectosas y las restantes $N_{2}$ no son defectuosas. Se seleccionan n bolas de la urna. Sea A la muestra de n bolas contiene $n_{1}$ bolas defectuosas. calcula P(A) si las bolas se seleccionan con reemplazo.
+	Una urna contiene $N$ bolas numeradas de $1$ a $N$. Las primeras $N_{1}$ son
+	defectuosas y las restantes $N_{2}$ no son defectuosas. Se seleccionan $n$
+	bolas de la urna. Sea $A$ la muestra de $n$ bolas contiene exactamente
+	$n_{1}$ bolas defectuosas.
+	Calcula $P(A)$ si las bolas se seleccionan con reemplazo.\\
+
+	Sea $P(A)$ la probabilidad de que una muestra de $n$ bolas contenga exactamente
+	$n_1$ bolas defectuosas, seleccionado las bolas con reemplazo.\\
+
+	Se tiene que el número de casos totales está dado mediante:
+	 	$$N^n$$
+	puesto que se puede elegir cada bola de $N$ maneras distintas.
+
+	Ahora, para contar los casos favorables, tenemos que elegir exactamente $n_1$
+	bolas defectuosas, podemos elegir las $n_1$ bolas de entre la muestra de tamaño
+	$n$ mediante:
+		$${n}\choose{n_1}$$
+	y luego, multiplicamos las formas de elegir cada una de las $n_1$ bolas de entre
+	$N_1$ bolas defectuoss
+		$$N_1 \cdot N_1 \cdot N_1 ... \cdot N_1 \quad \text{($n_1$ veces)}  = {N_{1}}^{n_1}$$
+	puesto que cada una de las $n_1$ bolas puede elegirse de $N_1$ formas distintas
+
+	Análogamante, para elegir las bolas restantes, se sigue que está dado mediante:
+		$$(N - N_1) \cdot (N - N_1) \cdot (N - N_1) ... \cdot (N - N_1)
+		  \quad \text{($n - n_1$ veces)}  =(N - N_{1})^{n - n_1}$$
+	pues no podemos elegir más de $n_1$ bolas defectuosas.\\
+
+	Se sigue por lo tanto que $P(A)$ está dada por:
+		$$P(A) = \frac{{n \choose n_1} {N_{1}}^{n_1} (N - N_{1})^{n - n_1} }
+				{N^n}$$
   }
 
      %Ejercicio 19
