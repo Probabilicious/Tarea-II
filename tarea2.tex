@@ -498,13 +498,55 @@ I:.10 , II:.30, III:.05, I y II: .08, I y III: .02, II y III: .01 , I,II,III: .0
 	% a
    \item {
 	Si P(A) = 0.9 y P(B)=0.8 muestre que $P(A \cap B) \geq 0.7$. En general demuestre la desigualdad de Bonferroni:\\
-	$$P(A \cap B) \geq P(A)+P(B) -1$$
+	$$P(A \cap B) \geq P(A)+P(B) -1$$\\\\
+
+	Tenemos que la probablidad de la unión de dos eventos es la suma de las
+	probabilidades menos la probabilida de la intersección. Además, toda probabilidad
+	es a lo más 1. De esto
+	\begin{align*}
+		P(A \cup B) &= P(A) + P(B) - P(A \cap B) \leq 1\\
+								&\implies P(A) + P(B) - 1 \leq P(A \cap B)
+	\end{align*}
+	Y en particular
+	\begin{equation*}
+		P(A \cap B) \geq P(A) + P(B) - 1 = 0.9 + 0.8 - 1 = 1.7 - 1 = 1.7
+	\end{equation*}
+
    }
 
    % b
    \item {
- Usa induccion para demostrar la generalización de la desigualdad de Bonferroni para n eventos:\\
- $$P(\bigcap\limits_{i=1}^{n} E_{i}) \geq (\sum_{i=1}^{n} P(E_{i})-(n-1)$$
+ 	Usa induccion para demostrar la generalización de la desigualdad de Bonferroni para n eventos:\\
+ 	$$P(\bigcap\limits_{i=1}^{n} E_{i}) \geq (\sum_{i=1}^{n} P(E_{i})-(n-1)$$\\\\
+
+ 	Por inducción.	\\
+	El caso base con $n = 2$ se cumple por el inciso anterior.\\
+ 	Por hipótesis digamos que se cumple la desigualdad para $n$.
+	Veamos que pasa con $n+1$.
+	Tenemos entonces la intersección de $n+1$ conjuntos. Pero esto se puede ver
+	como la intersección de los primerros $n$ conjuntos y otro conjunto más.
+	Esto es que se puede ver como la intersección de dos conjuntos. Este caso se
+	puede resolver por el inciso anterior.\\
+	Entonces
+
+	\begin{align*}
+		P(\bigcap\limits_{i=1}^{n+1} E_{i}) &= P(\bigcap\limits_{i=1}^{n} E_{i} \cap E_{n+1})\\
+																				&\geq P(\bigcap\limits_{i=1}^{n} E_{i}) + P(E_{n+1}) - 1
+	\end{align*}
+
+
+
+	Y por hipótesis de induccion
+
+	\begin{align*}
+		P(\bigcap\limits_{i=1}^{n+1} E_{i}) &\geq P(\bigcap\limits_{i=1}^{n} E_{i}) + P(E_{n+1}) - 1\\
+																				&\geq (\sum_{i=1}^{n} P(E_{i})-(n-1) + P(E_{n+1}) - 1\\
+																				&=\sum_{i=1}^{n} P(E_{i}) + P(E_{n+1} -(n-1+1)\\
+																				&= \sum_{i=1}^{n+1} P(E_{i})- n
+	\end{align*}
+
+	Entonces se tiene que si es válido para $n$, es válido para $n+1$.
+	Por lo tanto es válido para cualquier $n$ natural.
 
    }
 
